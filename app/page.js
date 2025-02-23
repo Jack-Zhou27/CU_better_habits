@@ -25,7 +25,7 @@ const Page = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://1e0c-34-66-120-146.ngrok-free.app/get_data',
+        const response = await fetch('https://6baf-34-66-120-146.ngrok-free.app/get_data',
           {
             method: "get",
             headers: new Headers({
