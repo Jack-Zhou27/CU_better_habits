@@ -25,7 +25,14 @@ const Page = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://34.66.120.146:8000/get_data');
+        const response = await fetch('https://1e0c-34-66-120-146.ngrok-free.app/get_data',
+          {
+            method: "get",
+            headers: new Headers({
+              "ngrok-skip-browser-warning": "69420",
+            }),
+          }
+        );
         const jsonData = await response.json();
         const postureArray = jsonData.data;
         
@@ -137,7 +144,7 @@ const Page = () => {
                   bottom: 60
                 }}
               >
-                <CartesianGrid strokeDasharray="3 3" />
+                <CartesianGrid strokeDasharray="9 9" />
 
                 <XAxis 
                   dataKey="time" 
@@ -172,6 +179,7 @@ const Page = () => {
                   stroke="#8884d8" 
                   dot={false} 
                   isAnimationActive={true} 
+                  strokeWidth={4}
                 />
               </LineChart>
             </ResponsiveContainer>
